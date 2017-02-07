@@ -1,29 +1,27 @@
 Change Log
 ==========
 
-### 0.1.0-alpha11 - ??
-* Added `compressTextures` stage to compress input textures to a variety of compressed texture formats.
-* Optimized `mergeBuffers` to avoid repeated copies, drastically improving performance when there are lots of buffers to merge.
-* Fixed a bug in `addPipelineExtras` that made it try to add extras to null objects.
-* Expose `triangleAxisAlignedBoundingBoxOverlap`, an implementation of Tomas Akenine-Möller algorithm for determining if a triangle overlaps an axis aligned bounding box.
-* Merged [gltf-statistics](https://github.com/AnalyticalGraphicsInc/gltf-statistics) as a stage in the pipeline.
+### 0.1.0-alpha10 - 2017-02-07
+* Added `compressTextures` stage to compress input textures to a variety of compressed texture formats. [#204](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/204)
+* Optimized `mergeBuffers` to avoid repeated copies, drastically improving performance when there are lots of buffers to merge. [#218](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/218)
+* Fixed a bug in `addPipelineExtras` that made it try to add extras to null objects. [#219](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/219)
+* Expose `triangleAxisAlignedBoundingBoxOverlap`, an implementation of Tomas Akenine-Möller algorithm for determining if a triangle overlaps an axis aligned bounding box. [#221](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/221)
+* Merged [gltf-statistics](https://github.com/AnalyticalGraphicsInc/gltf-statistics) as a stage in the pipeline. [#220](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/220)
 * Added `updateVersion` stage for patching glTF `0.8` -> `1.0` changes; `addDefaults` no longer calls `processModelMaterialsCommon`. [#223](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/223)
-* Added `build-cesium-combined` command to gulp file for generating simple files for other projects. [#231](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/231).
-* Change Cesium `Geometry`'s and `VertexFormat`'s `binormal` attribute to bitangent.
-
-### 0.1.0-alpha10 - 2017-01-10
-* Added `tangentsBitangents` generation option
+* Added `build-cesium-combined` command to gulp file for generating simple files for other projects. [#231](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/231)
+* Changed Cesium `Geometry` and `VertexFormat` `binormal` attribute to `bitangent`. [#211](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/211)
+* Added `tangentsBitangents` generation option. [#203](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/203)
 
 ### 0.1.0-alpha9 - 2017-01-03
-* Fixed issue with embedding base64 encoded shader strings for assets using the KHR_materials_common extension
+* Fixed issue with embedding base64 encoded shader strings for assets using the KHR_materials_common extension. [#197](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/197)
 
 ### 0.1.0-alpha8 - 2016-12-13
-* Fixed issue with embedding base64 encoded shader strings inside the glTF.
-* Added `-p` flag for preserving the glTF hierarchy. Optimization stages are not run when this flag is enabled.
+* Fixed issue with embedding base64 encoded shader strings inside the glTF. [#194](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/194)
+* Added `-p` flag for preserving the glTF hierarchy. Optimization stages are not run when this flag is enabled. [#200](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/200)
 
 ### 0.1.0-alpha7 - 2016-12-08
-* `modelMaterialsCommon` renamed to `processModelMaterialsCommon`.
-* Added `generateModelMaterialsCommon` and command line `kmc` flags for generating models with the `KHR_materials_common` extension.
+* `modelMaterialsCommon` renamed to `processModelMaterialsCommon`. [#185](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/185)
+* Added `generateModelMaterialsCommon` and command line `kmc` flags for generating models with the `KHR_materials_common` extension. [#185](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/pull/185)
 
 ### 0.1.0-alpha6 - 2016-11-18
 
